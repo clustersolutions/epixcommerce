@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Exceptions;
+namespace OSC\Exceptions;
 
 use Exception;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
