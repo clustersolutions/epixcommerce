@@ -53,7 +53,7 @@
 
         $result = $Qspecial->fetch();
 
-        if ( count($result) > 0 ) {
+        if ( count($result ? $result : []) > 0 ) {
           $this->_specials[$id] = $result['specials_new_products_price'];
         } else {
           $this->_specials[$id] = null;
