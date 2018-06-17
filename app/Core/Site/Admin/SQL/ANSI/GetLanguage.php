@@ -1,0 +1,28 @@
+<?php
+/**
+ * osCommerce Online Merchant
+ * 
+ * @copyright Copyright (c) 2011 osCommerce; http://www.oscommerce.com
+ * @license BSD License; http://www.oscommerce.com/bsdlicense.txt
+ */
+
+  namespace OSC\Core\Site\Admin\SQL\ANSI;
+
+  use OSC\Core\Registry;
+
+/**
+ * @since v3.0.3
+ */
+
+  class GetLanguage {
+    public static function execute($data) {
+      $OSCOM_PDO = Registry::get('PDO');
+
+      $Qlanguage = $OSCOM_PDO->prepare('select * from :table_languages where languages_id = :languages_id');
+      $Qlanguage->bindInt(':languages_id', $data['id']);
+      $Qlanguage->execute();
+
+      return $Qlanguage->fetch();
+    }
+  }
+?>
