@@ -14,8 +14,10 @@
   use OSC\Core\PDO;
   use OSC\Core\Registry;
   use OSC\Core\Template;
+  use OSC\Models\OscConfiguration;
 
-  class Controller implements \OSC\Core\SiteInterface {
+
+class Controller implements \OSC\Core\SiteInterface {
     protected static $_default_application = 'Index';
 
     public static function initialize() {
@@ -23,7 +25,12 @@
       Registry::set('Cache', new Cache());
       Registry::set('PDO', PDO::initialize());
 
-      foreach ( OSCOM::callDB('Shop\GetConfiguration', null, 'Site') as $param ) {
+      // Just to test Laravel's ORM below.
+      //      foreach ( OSCOM::callDB('Shop\GetConfiguration', null, 'Site') as $param ) {
+      //        define($param['cfgkey'], $param['cfgvalue']);
+      //      }
+
+      foreach (OscConfiguration::get(['configuration_key as cfgkey', 'configuration_value as cfgvalue']) as $param) {
         define($param['cfgkey'], $param['cfgvalue']);
       }
 
