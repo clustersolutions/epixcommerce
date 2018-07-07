@@ -11,6 +11,10 @@
 |
 */
 
+
+
 Route::get('/', 'ShopController@index');
 
 Route::get('/Shop/', 'ShopController@index');
+
+Route::post('/', 'ShopController@index');
