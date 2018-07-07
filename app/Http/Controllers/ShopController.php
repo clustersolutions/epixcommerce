@@ -16,14 +16,17 @@ class ShopController extends Controller
      */
     public function index()
     {
-	    OSCOM::setSite('Shop');
+        // Leave it to OSC for now. TODO: routes setup.
+        // OSCOM::setSite('Admin');
 
-	    OSCOM::initialize();
+        OSCOM::initialize();
+        $OSCOM_Template = Registry::get('Template');
 
-	    $OSCOM_Template = Registry::get('Template');
+        echo $OSCOM_Template->getContent();
 
-	    echo $OSCOM_Template->getContent();
+        //  Testing Blade
+        //  return view('main');
 
-	}
+    }
 }
 ?>
