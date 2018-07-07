@@ -40,7 +40,7 @@
       }
 
       static::setSiteApplication();
-//dd('OSC\\Core\\Site\\' . static::getSite() . '\\Controller', 'initialize');
+
       call_user_func(array('OSC\\Core\\Site\\' . static::getSite() . '\\Controller', 'initialize'));
     }
 
