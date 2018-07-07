@@ -6,9 +6,9 @@
  * @license BSD License; http://www.oscommerce.com/bsdlicense.txt
  */
 
-  namespace osCommerce\OM\Core\Template;
+  namespace OSC\Core\Template;
 
-  use osCommerce\OM\Core\Registry;
+  use OSC\Core\Registry;
 
   abstract class WidgetAbstract {
     static public function initialize($param = null) {

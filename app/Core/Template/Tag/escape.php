@@ -6,11 +6,11 @@
  * @license BSD License; http://www.oscommerce.com/bsdlicense.txt
  */
 
-  namespace osCommerce\OM\Core\Template\Tag;
+  namespace OSC\Core\Template\Tag;
 
-  use osCommerce\OM\Core\HTML;
+  use OSC\Core\HTML;
 
-  class escape extends \osCommerce\OM\Core\Template\TagAbstract {
+  class escape extends \OSC\Core\Template\TagAbstract {
     static public function execute($string) {
       return HTML::outputProtected($string);
     }

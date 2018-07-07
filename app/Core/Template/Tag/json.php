@@ -6,9 +6,9 @@
  * @license BSD; https://www.oscommerce.com/license/bsd.txt
  */
 
-namespace osCommerce\OM\Core\Template\Tag;
+namespace OSC\Core\Template\Tag;
 
-class json extends \osCommerce\OM\Core\Template\TagAbstract
+class json extends \OSC\Core\Template\TagAbstract
 {
     public static function execute($string)
     {

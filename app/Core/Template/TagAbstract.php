@@ -6,7 +6,7 @@
  * @license BSD License; http://www.oscommerce.com/bsdlicense.txt
  */
 
-  namespace osCommerce\OM\Core\Template;
+  namespace OSC\Core\Template;
 
   abstract class TagAbstract {
     static protected $_parse_result = true;

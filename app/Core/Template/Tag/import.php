@@ -6,11 +6,11 @@
  * @license BSD; http://www.oscommerce.com/bsdlicense.txt
  */
 
-namespace osCommerce\OM\Core\Template\Tag;
+namespace OSC\Core\Template\Tag;
 
-use osCommerce\OM\Core\Registry;
+use OSC\Core\Registry;
 
-class import extends \osCommerce\OM\Core\Template\TagAbstract
+class import extends \OSC\Core\Template\TagAbstract
 {
     public static function execute($file): string
     {

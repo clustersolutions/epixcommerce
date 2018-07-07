@@ -6,12 +6,12 @@
  * @license BSD License; http://www.oscommerce.com/bsdlicense.txt
  */
 
-  namespace osCommerce\OM\Core\Template\Tag;
+  namespace OSC\Core\Template\Tag;
 
-  use osCommerce\OM\Core\OSCOM;
-  use osCommerce\OM\Core\Registry;
+  use OSC\Core\OSCOM;
+  use OSC\Core\Registry;
 
-  class ifvalue extends \osCommerce\OM\Core\Template\TagAbstract {
+  class ifvalue extends \OSC\Core\Template\TagAbstract {
     static protected $_parse_result = false;
 
     static public function execute($string) {

@@ -6,9 +6,9 @@
  * @license BSD License; http://www.oscommerce.com/bsdlicense.txt
  */
 
-  namespace osCommerce\OM\Core\Template\Tag;
+  namespace OSC\Core\Template\Tag;
 
-  class link extends \osCommerce\OM\Core\Template\TagAbstract {
+  class link extends \OSC\Core\Template\TagAbstract {
     static protected $_parse_result = false;
 
     static public function execute($string) {
@@ -42,7 +42,7 @@
         }
       }
 
-      return call_user_func_array('osCommerce\OM\Core\OSCOM::getLink', $params);
+      return call_user_func_array('OSC\Core\OSCOM::getLink', $params);
     }
   }
 ?>

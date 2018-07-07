@@ -6,11 +6,11 @@
  * @license BSD License; http://www.oscommerce.com/bsdlicense.txt
  */
 
-  namespace osCommerce\OM\Core\Template\Tag;
+  namespace OSC\Core\Template\Tag;
 
-  use osCommerce\OM\Core\OSCOM;
+  use OSC\Core\OSCOM;
 
-  class widget extends \osCommerce\OM\Core\Template\TagAbstract {
+  class widget extends \OSC\Core\Template\TagAbstract {
     static public function execute($string) {
       $params = explode('|', $string, 2);
 
@@ -22,17 +22,17 @@
 
       $class = null;
 
-      if ( class_exists('osCommerce\\OM\\Core\\Site\\' . OSCOM::getSite() . '\\Application\\' . OSCOM::getSiteApplication() . '\\Module\\Template\\Widget\\' . $widget . '\\Controller') ) {
-        $class = 'osCommerce\\OM\\Core\\Site\\' . OSCOM::getSite() . '\\Application\\' . OSCOM::getSiteApplication() . '\\Module\\Template\\Widget\\' . $widget . '\\Controller';
-      } elseif ( class_exists('osCommerce\\OM\\Core\\Site\\' . OSCOM::getSite() . '\\Module\\Template\\Widget\\' . $widget . '\\Controller') ) {
-        $class = 'osCommerce\\OM\\Core\\Site\\' . OSCOM::getSite() . '\\Module\\Template\\Widget\\' . $widget . '\\Controller';
+      if ( class_exists('OSC\\Core\\Site\\' . OSCOM::getSite() . '\\Application\\' . OSCOM::getSiteApplication() . '\\Module\\Template\\Widget\\' . $widget . '\\Controller') ) {
+        $class = 'OSC\\Core\\Site\\' . OSCOM::getSite() . '\\Application\\' . OSCOM::getSiteApplication() . '\\Module\\Template\\Widget\\' . $widget . '\\Controller';
+      } elseif ( class_exists('OSC\\Core\\Site\\' . OSCOM::getSite() . '\\Module\\Template\\Widget\\' . $widget . '\\Controller') ) {
+        $class = 'OSC\\Core\\Site\\' . OSCOM::getSite() . '\\Module\\Template\\Widget\\' . $widget . '\\Controller';
       }
 
       if ( isset($class) ) {
-        if ( is_subclass_of($class, 'osCommerce\\OM\\Core\\Template\\WidgetAbstract') ) {
+        if ( is_subclass_of($class, 'OSC\\Core\\Template\\WidgetAbstract') ) {
           return call_user_func(array($class, 'initialize'), $params[1]);
         } else {
-          trigger_error('Template Widget {' . $widget . '} is not subclass of osCommerce\\OM\\Core\\Template\\WidgetAbstract for ' . OSCOM::getSite());
+          trigger_error('Template Widget {' . $widget . '} is not subclass of OSC\\Core\\Template\\WidgetAbstract for ' . OSCOM::getSite());
         }
       } else {
         trigger_error('Template Widget {' . $widget . '} does not exist for ' . OSCOM::getSite());

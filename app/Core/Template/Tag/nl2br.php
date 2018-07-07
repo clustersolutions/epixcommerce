@@ -1,16 +1,16 @@
 <?php
 /**
  * osCommerce Online Merchant
- * 
+ *
  * @copyright Copyright (c) 2012 osCommerce; http://www.oscommerce.com
  * @license BSD License; http://www.oscommerce.com/bsdlicense.txt
  */
 
-  namespace osCommerce\OM\Core\Template\Tag;
+  namespace OSC\Core\Template\Tag;
 
-  use osCommerce\OM\Core\HTML;
+  use OSC\Core\HTML;
 
-  class nl2br extends \osCommerce\OM\Core\Template\TagAbstract {
+  class nl2br extends \OSC\Core\Template\TagAbstract {
     static public function execute($string) {
       return nl2br($string);
     }

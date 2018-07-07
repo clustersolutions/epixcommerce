@@ -6,11 +6,11 @@
  * @license BSD; http://www.oscommerce.com/bsdlicense.txt
  */
 
-namespace osCommerce\OM\Core\Template\Tag;
+namespace OSC\Core\Template\Tag;
 
-use osCommerce\OM\Core\HTML;
+use OSC\Core\HTML;
 
-class value extends \osCommerce\OM\Core\Template\TagAbstract
+class value extends \OSC\Core\Template\TagAbstract
 {
     static protected $_parse_result = false;
 

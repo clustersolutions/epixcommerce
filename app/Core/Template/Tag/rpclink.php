@@ -1,16 +1,16 @@
 <?php
 /**
  * osCommerce Online Merchant
- * 
+ *
  * @copyright Copyright (c) 2012 osCommerce; http://www.oscommerce.com
  * @license BSD License; http://www.oscommerce.com/bsdlicense.txt
  */
 
-  namespace osCommerce\OM\Core\Template\Tag;
+  namespace OSC\Core\Template\Tag;
 
-  use osCommerce\OM\Core\OSCOM;
+  use OSC\Core\OSCOM;
 
-  class rpclink extends \osCommerce\OM\Core\Template\TagAbstract {
+  class rpclink extends \OSC\Core\Template\TagAbstract {
     static protected $_parse_result = false;
 
 /**

@@ -6,14 +6,14 @@
  * @license BSD; https://www.oscommerce.com/license/bsd.txt
  */
 
-namespace osCommerce\OM\Core\Template\Tag;
+namespace OSC\Core\Template\Tag;
 
-use osCommerce\OM\Core\{
+use OSC\Core\{
     OSCOM,
     Registry
 };
 
-class ifnovalue extends \osCommerce\OM\Core\Template\TagAbstract
+class ifnovalue extends \OSC\Core\Template\TagAbstract
 {
     protected static $_parse_result = false;
 
